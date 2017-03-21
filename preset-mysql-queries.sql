@@ -8,9 +8,10 @@ CREATE TABLE `api_sessions` (
   KEY `last_activity_idx` (`last_activity`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-ALTER TABLE `api_sessions` 
+ALTER TABLE `api_sessions`
 ADD `user_id` INT(11),
 MODIFY `session_id` VARCHAR(120);
 
-ALTER TABLE `datetime_formats` 
+
+ALTER TABLE `datetime_formats`
 ADD COLUMN `moment` VARCHAR(255) NULL DEFAULT NULL AFTER `php_time`;

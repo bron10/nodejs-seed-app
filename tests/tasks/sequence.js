@@ -11,5 +11,4 @@ describe('\t----> Testing Apis in sequence', function(){
 
 
     routes.auth();
-    
 })

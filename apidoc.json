@@ -1,0 +1,18 @@
+{
+    "name": "API",
+    "description": "This is a API list of the available apis. Please do bear with us as this doc will be changing very frequently as its still in development",
+    "title": "API",
+    "header" : {
+        "title"     : "Header options",
+        "filename"  : "header.md"
+    },
+    "order": [
+        "Error",
+        "Define",
+        "PostTitleAndError",
+        "PostError"
+    ],
+    "template": {
+        "withCompare": false
+    }
+}

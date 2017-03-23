@@ -195,6 +195,7 @@ app.use(responder.handle);
  *
  * @return Middleware for setting company data w.r.t requests
 */
+console.log("middlewares.dbConfigSetter(app, models)", middlewares.dbConfigSetter(app, models));
 app.use(middlewares.dbConfigSetter(app, models));
 
 /** Set interfacetype **/

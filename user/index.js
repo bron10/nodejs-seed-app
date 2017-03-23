@@ -200,66 +200,6 @@ module.exports  = function(app, UnauthRouteHandler){
      *  @apiUse UnprocessableEntity
      */
 	app.delete('/session/destroy_all', sessionCtrl.destroyAll);
-    /**
-        * @api {POST} session/set_venue Set venue
-        * @apiName setVenue
-        * @apiGroup Session
-        *
-        * @apiParam {Number} venue_id Mandatory: Venue id according to the loggedin user.
-        *
-        * @apiSuccessExample Success-Response:
-        *     HTTP/1.1 200 OK
-        *  {
-            "status_code": 200,
-            "message": "Venue is configured successfully",
-            "data": {
-                "id": 491,
-                "name": "bd",
-                "venue_code": "brn",
-                "website": "",
-                "combinable_payment_methods": "Yes",
-                "status": "active",
-                "account_type": "",
-                "created_date": "2015-12-10 06:49:00",
-                "timezone": "Asia/Kolkata",
-                "account_type_id": 2,
-                "currency_id": 53,
-                "language_code": "en",
-                "company_id": 1,
-                "organization_type": 17,
-                "view_type": "list",
-                "datetime_format": 1,
-                "billing_apply": "yes",
-                "ticket_template_id": 1,
-                "test_flag": "no",
-                "timezone_detail": "+05:30",
-                "currency_details": {
-                    "id": 53,
-                    "country": "India",
-                    "currency": "Rupees",
-                    "code": "INR",
-                    "symbol": "Rs",
-                    "html_number": "&#x20B9;",
-                    "status": "Y",
-                    "is_beta": "N",
-                    "decimal_symbol": ".",
-                    "price_per_ticket": "12",
-                    "currency_decimal": 2,
-                    "price_percentage": "2.5",
-                    "sort_rank": 0,
-                    "symbol_position": "L",
-                    "locale": "en_GB"
-                }
-            }
-        }
-        *  @apiUse NotFoundError
-        *  @apiUse ForbiddenError
-        *  @apiUse ServerError
-        *  @apiUse UnprocessableEntity
-        *
-    */
-    app.post('/session/set_venue', core.venue.setVenueInfo(models));
-
 
     /**
         * @api {PUT} user Update user data

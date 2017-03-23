@@ -6,5 +6,5 @@ var middlewares        = require('../middlewares');
 var payloadChecker  = middlewares.payloadChecker;
 module.exports = function(app, appUnAuth){
     require("./logs")(app, appUnAuth);
-	  app.use('/settings', [payloadChecker.data.venueChecker, require('./settings')(models, core, middlewares, appUnAuth)])
+	  
 }

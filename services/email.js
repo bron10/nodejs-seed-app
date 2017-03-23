@@ -2,7 +2,7 @@ var nodemailer  = require('nodemailer');
 var mongoModels = require('./mongo-sdk');
 
 module.exports = function(globalData) {
-    var companyModel = require('../models/company');
+    
 
     var globalData          = _.assign({}, appUtils.getAppLocalData())
     //console.log("globalData", globalData);

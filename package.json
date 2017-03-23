@@ -5,6 +5,17 @@
   "main": "app.js",
   "author": "bron",
   "license": "MIT",
+  "scripts": {
+    "start": "npm run dev-pm2",
+    "start-prod": "export NODE_ENV=production;npm run prod-pm2",
+    "start-stage": "export NODE_ENV=staging;npm run dev-pm2",
+    "dev-pm2": "pm2-dev run app.js",
+    "prod-pm2": "pm2 start app.js",
+    "stop": "pm2 stop app",
+    "preinstall": "sudo npm i -g pm2 apidoc gulp",
+    "create-doc": "apidoc -f '.*\\.js' -i controllers/ -i venue/ -i user/ -i responses/ -i core/ -i reports/ -i stats/ -o doc/",
+    "test": "gulp test-routes --app=stats"
+  },
   "dependencies": {
     "bluebird": "^3.0.5",
     "body-parser": "^1.14.1",
